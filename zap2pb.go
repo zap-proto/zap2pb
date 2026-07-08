@@ -10,6 +10,9 @@ import (
 // Marshal encodes m to protobuf wire bytes.
 func Marshal(m proto.Message) ([]byte, error) { return proto.Marshal(m) }
 
+// Unmarshal decodes protobuf wire bytes into m.
+func Unmarshal(b []byte, m proto.Message) error { return proto.Unmarshal(b, m) }
+
 // Equal reports whether a and b are semantically equal messages.
 func Equal(a, b proto.Message) bool { return proto.Equal(a, b) }
 
